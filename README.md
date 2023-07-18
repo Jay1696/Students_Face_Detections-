@@ -17,17 +17,17 @@ The important thing is that every image contains a person's face. We will use th
 The data set is ready to be input into the face detection model.  Create the face mosaic  The next step is to create the face mosaic. The key to the face is a vector representing the features extracted from the image. Then it will be compared with vectors generated for other looks. For example, another close vector (to some extent) may be the same person, while another vector that is far away (to some time) may be a different person.  The classifier model that we are going to develop takes face embedding as input and predicts the identity of the face. The FaceNet model will generate this inlay for a given face image. 
 
 
-#Perform face classification 
+# Perform face classification 
   The FaceNet model can be used as a portion of the classifier itself, or we can use the FaceNet model to preprocess faces to produce a face integration that can be kept and used as input for our classifier model. The latter method is preferred because the FaceNet model is large and slow and cannot create facial inlays.  So we can pre-calculate the face embeddings of all faces in training and put them in our
 Then we can fit a model. When processing normalized facial key input, a linear support vector machine (SVM) is usually used. This is because the technique is very effective in separating the key vectors of the face. Using the SVC class in sci-kit, learn and setting the `kernel` attribute to `linear.` We may also need probability when we make predictions later, which can be set by setting `probability` to `True.`
 
 We plotted one image randomly to see how our model performs. 
 
-#Conclusion
+# Conclusion
   Deep neural networks work better than machine learning models in terms of extracting meaningful features. Although, the limitation of this network is the requirement of a large amount of data. We try to manage this issue with the aid of a pre-trained model. The pre-trained model is a model that has been trained as a large dataset to gain knowledge about encoding face images. SVM fine-tuning also helps us a lot to push our accuracy to its best outcome. 
 Future enhancements 
 A facial recognition system can further improvise by including age prediction, emotion prediction, and identification of different face-related health problems. The utilization of facial recognition systems can occur for other purposes rather than a security system.
  
-#References
+# References
 T, J. (2020, November 3). Face Recognition Walkthrough--FaceNet. Pluralsight. https://www.pluralsight.com/guides/face-recognition-walkthrough-facenet
 Kaspersky. (2021b, August 9). What is Facial Recognition – Definition and Explanation. Kaspersky Cyber Security Solutions for Home & Business. https://www.kaspersky.com/resource-center/definitions/what-is-facial-recognition
